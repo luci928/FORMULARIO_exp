@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario a CV</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+
+<form id="miFormulario" onsubmit="guardarDatos(event)">
+<h2 >FORMULARIO a CV</h2>
+  <label for="Nom_Ape">Nombres y Apellidos :</label><br>
+  <input type="text" id="Nom_Ape" name="Nom_Ape"><br>
+
+  <p></p>
+
+  <label for="Fecha_Nac">Fecha de nacimiento :</label><br>
+  <input type="date" id="Fecha_Nac" name="Fecha_Nac"><br>
+
+  <p></p>
+
+  <label for="Ocup">Ocupación :</label><br>
+  <input type="text" id="Ocup" name="Ocup"><br>
+
+  <p>Contacto:</p>
+
+  <label for="Num_tel">Número telefónico [9 dígitos] :</label>
+  <input type="tel" id="Num_tel" name="Num_tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br>
+  <small>Formato: 912-345-678</small><br><br>
+
+  <p></p>
+
+  <label for="email">E-mail :</label>
+  <input type="email" id="email" name="email">
+
+  <p>Nacionalidad:</p>
+
+  <input list="nacionalidades">
+  <datalist id="nacionalidades">
+            <option value="Antigua y Barbuda">
+            <option value="Argentina">
+            <option value="Bahamas">
+            <option value="Barbados">
+            <option value="Belice">
+            <option value="Bolivia">
+            <option value="Brasil">
+            <option value="Canadá">
+            <option value="Chile">
+            <option value="Colombia">
+            <option value="Costa Rica">
+            <option value="Cuba">
+            <option value="Dominica">
+            <option value="Ecuador">
+            <option value="El Salvador">
+            <option value="Estados Unidos">
+            <option value="Granada">
+            <option value="Guatemala">
+            <option value="Guyana">
+            <option value="Haití">
+            <option value="Honduras">
+            <option value="Jamaica">
+            <option value="México">
+            <option value="Nicaragua">
+            <option value="Panamá">
+            <option value="Paraguay">
+            <option value="Perú">
+            <option value="República Dominicana">
+            <option value="San Cristóbal y Nieves">
+            <option value="Santa Lucía">
+            <option value="San Vicente y las Granadinas">
+            <option value="Surinam">
+            <option value="Trinidad y Tobago">
+            <option value="Uruguay">
+            <option value="Venezuela">
+  </datalist><br>
+
+  <p>Nivel de Inglés: </p>
+
+  <input type="radio" id="básico" name="niv_ing" value="Básico">
+  <label for="básico">Básico</label><br>
+  <input type="radio" id="intermedio" name="niv_ing" value="Intermedio">
+  <label for="intermedio">Intermedio</label><br>
+  <input type="radio" id="avanzado" name="niv_ing" value="Avanzado">
+  <label for="avanzado">Avanzado</label><br>
+  <input type="radio" id="fluido" name="niv_ing" value="Fluido">
+  <label for="fluido">Fluido</label><br>
+
+  <p>Lenguajes de Programación: </p>
+
+  <input type="checkbox" id="LP1" name="LP1" value="Python">
+  <label for="Python"> Python</label><br>
+  <input type="checkbox" id="LP2" name="LP2" value="C">
+  <label for="C"> C</label><br>
+  <input type="checkbox" id="LP3" name="LP3" value="C++">
+  <label for="C++"> C++</label><br>
+  <input type="checkbox" id="LP4" name="LP4" value="JavaScript">
+  <label for="LP4"> JavaScript</label><br>
+  <input type="checkbox" id="LP5" name="LP5" value="Java">
+  <label for="LP5"> Java</label><br>
+
+  <p>Aptitudes:</p>
+
+  <input list="aptitud1">
+  <datalist id="aptitud1">
+        <option value="Multilingüismo">
+        <option value="Resolución de problemas">
+        <option value="Organización">
+        <option value="Liderazgo">
+        <option value="Creatividad">
+        <option value="Adaptabilidad">
+        <option value="Comunicación">
+        <option value="Autocontrol">
+        <option value="Integridad">
+        <option value="Trabajo en equipo">
+        <option value="Resiliencia">
+  </datalist><br>
+
+  <input list="aptitud2">
+  <datalist id="aptitud2">
+        <option value="Multilingüismo">
+        <option value="Resolución de problemas">
+        <option value="Organización">
+        <option value="Liderazgo">
+        <option value="Creatividad">
+        <option value="Adaptabilidad">
+        <option value="Comunicación">
+        <option value="Autocontrol">
+        <option value="Integridad">
+        <option value="Trabajo en equipo">
+        <option value="Resiliencia">
+  </datalist><br>
+
+  <input list="aptitud3">
+  <datalist id="aptitud3">
+        <option value="Multilingüismo">
+        <option value="Resolución de problemas">
+        <option value="Organización">
+        <option value="Liderazgo">
+        <option value="Creatividad">
+        <option value="Adaptabilidad">
+        <option value="Comunicación">
+        <option value="Autocontrol">
+        <option value="Integridad">
+        <option value="Trabajo en equipo">
+        <option value="Resiliencia">
+  </datalist><br>
+
+  <p>Habilidades: </p>
+
+  <input type="checkbox" id="Hab1" name="Hab1" value="Cloud Computing">
+  <label for="Cloud Computing"> Cloud Computing</label><br>
+  <input type="checkbox" id="Hab2" name="Hab2" value="Inteligencia Artificial">
+  <label for="Inteligencia Artificial"> Inteligencia Artificial</label><br>
+  <input type="checkbox" id="Hab3" name="Hab3" value="Diseño UX">
+  <label for="Diseño UX"> Diseño UX</label><br>
+  <input type="checkbox" id="Hab4" name="Hab4" value="Desarrollo de aplicaciones móviles">
+  <label for="Desarrollo de aplicaciones móviles"> Desarrollo de aplicaciones móviles</label><br>
+  <input type="checkbox" id="Hab5" name="Hab5" value="Producción de video">
+  <label for="Producción de video"> Producción de video</label><br>
+  <input type="checkbox" id="Hab6" name="Hab6" value="Liderazgo de ventas">
+  <label for="Liderazgo de ventas"> Liderazgo de ventas</label><br>
+  <input type="checkbox" id="Hab7" name="Hab7" value="Traducción">
+  <label for="Traducción"> Traducción</label><br>
+  <input type="checkbox" id="Hab8" name="Hab8" value="Producción de audio">
+  <label for="Producción de audio"> Producción de audio</label><br>
+  <input type="checkbox" id="Hab9" name="Hab9" value="Gestión de personas">
+  <label for="Gestión de personas"> Gestión de personas</label><br>
+
+
+  <p><label for="perfil">Perfil:</label></p>
+  <textarea id="perfil" name="perfil" rows="4" cols="50">Cuentanos un poco sobre ti.</textarea><br>
+
+  <p>Gracias por responder este formulario</p>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  function guardarDatos(event) {
+    event.preventDefault(); 
+
+    var nombre = document.getElementById('Nom_Ape').value;
+    var fechaNacimiento = document.getElementById('Fecha_Nac').value;
+    var ocupacion = document.getElementById('Ocup').value;
+    var telefono = document.getElementById('Num_tel').value;
+    var email = document.getElementById('email').value;
+    var nacionalidad = document.querySelector('input[list="nacionalidades"]').value;
+ 
+
+  
+    var contenido = "Nombre: " + nombre + "\n" +
+                    "Fecha de nacimiento: " + fechaNacimiento + "\n" +
+                    "Ocupación: " + ocupacion + "\n" +
+                    "Teléfono: " + telefono + "\n" +
+                    "Email: " + email + "\n" +
+                    "Nacionalidad: " + nacionalidad + "\n";
+  
+
+    var archivo = new Blob([contenido], { type: 'text/plain' });
+
+
+    var enlace = document.createElement('a');
+    enlace.href = URL.createObjectURL(archivo);
+    enlace.download = 'formulario.txt';
+    
+    enlace.click();
+  }
+</script>
+
+</body>
+</html>
