@@ -6,9 +6,8 @@
 </head>
 <body>
 
-
-<form id="miFormulario" onsubmit="guardarDatos(event)">
-<h2 >FORMULARIO a CV</h2>
+<form id="miFormulario" onsubmit="mostrarDatos(event)">
+<h2>FORMULARIO a CV</h2>
   <label for="Nom_Ape">Nombres y Apellidos :</label><br>
   <input type="text" id="Nom_Ape" name="Nom_Ape"><br>
 
@@ -31,7 +30,7 @@
   <p></p>
 
   <label for="email">E-mail :</label>
-  <input type="email" id="email" name="email">
+  <input type="email" id="email" name="email"><br>
 
   <p>Nacionalidad:</p>
 
@@ -87,15 +86,15 @@
 
   <p>Lenguajes de Programación: </p>
 
-  <input type="checkbox" id="LP1" name="LP1" value="Python">
+  <input type="checkbox" id="LP1" name="LP" value="Python">
   <label for="Python"> Python</label><br>
-  <input type="checkbox" id="LP2" name="LP2" value="C">
+  <input type="checkbox" id="LP2" name="LP" value="C">
   <label for="C"> C</label><br>
-  <input type="checkbox" id="LP3" name="LP3" value="C++">
+  <input type="checkbox" id="LP3" name="LP" value="C++">
   <label for="C++"> C++</label><br>
-  <input type="checkbox" id="LP4" name="LP4" value="JavaScript">
+  <input type="checkbox" id="LP4" name="LP" value="JavaScript">
   <label for="LP4"> JavaScript</label><br>
-  <input type="checkbox" id="LP5" name="LP5" value="Java">
+  <input type="checkbox" id="LP5" name="LP" value="Java">
   <label for="LP5"> Java</label><br>
 
   <p>Aptitudes:</p>
@@ -147,35 +146,94 @@
 
   <p>Habilidades: </p>
 
-  <input type="checkbox" id="Hab1" name="Hab1" value="Cloud Computing">
+  <input type="checkbox" id="Hab1" name="Hab" value="Cloud Computing">
   <label for="Cloud Computing"> Cloud Computing</label><br>
-  <input type="checkbox" id="Hab2" name="Hab2" value="Inteligencia Artificial">
+  <input type="checkbox" id="Hab2" name="Hab" value="Inteligencia Artificial">
   <label for="Inteligencia Artificial"> Inteligencia Artificial</label><br>
-  <input type="checkbox" id="Hab3" name="Hab3" value="Diseño UX">
+  <input type="checkbox" id="Hab3" name="Hab" value="Diseño UX">
   <label for="Diseño UX"> Diseño UX</label><br>
-  <input type="checkbox" id="Hab4" name="Hab4" value="Desarrollo de aplicaciones móviles">
+  <input type="checkbox" id="Hab4" name="Hab" value="Desarrollo de aplicaciones móviles">
   <label for="Desarrollo de aplicaciones móviles"> Desarrollo de aplicaciones móviles</label><br>
-  <input type="checkbox" id="Hab5" name="Hab5" value="Producción de video">
+  <input type="checkbox" id="Hab5" name="Hab" value="Producción de video">
   <label for="Producción de video"> Producción de video</label><br>
-  <input type="checkbox" id="Hab6" name="Hab6" value="Liderazgo de ventas">
+  <input type="checkbox" id="Hab6" name="Hab" value="Liderazgo de ventas">
   <label for="Liderazgo de ventas"> Liderazgo de ventas</label><br>
-  <input type="checkbox" id="Hab7" name="Hab7" value="Traducción">
+  <input type="checkbox" id="Hab7" name="Hab" value="Traducción">
   <label for="Traducción"> Traducción</label><br>
-  <input type="checkbox" id="Hab8" name="Hab8" value="Producción de audio">
+  <input type="checkbox" id="Hab8" name="Hab" value="Producción de audio">
   <label for="Producción de audio"> Producción de audio</label><br>
-  <input type="checkbox" id="Hab9" name="Hab9" value="Gestión de personas">
+  <input type="checkbox" id="Hab9" name="Hab" value="Gestión de personas">
   <label for="Gestión de personas"> Gestión de personas</label><br>
 
 
   <p><label for="perfil">Perfil:</label></p>
   <textarea id="perfil" name="perfil" rows="4" cols="50">Cuentanos un poco sobre ti.</textarea><br>
 
-  <p>Gracias por responder este formulario</p>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Siguiente">
 </form>
 
+<div class="cv-container" style="display:none;">
+  <h2>Curriculum Vitae</h2>
+  <div class="cv-info">
+    <label>Nombres y Apellidos:</label>
+    <p id="cv-nombre"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Fecha de nacimiento:</label>
+    <p id="cv-fecha-nacimiento"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Ocupación:</label>
+    <p id="cv-ocupacion"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Número telefónico:</label>
+    <p id="cv-telefono"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Email:</label>
+    <p id="cv-email"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Nacionalidad:</label>
+    <p id="cv-nacionalidad"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Nivel de Inglés:</label>
+    <p id="cv-nivel-ingles"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Lenguajes de Programación:</label>
+    <p id="cv-lenguajes-programacion"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Aptitudes:</label>
+    <p id="cv-aptitudes"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Habilidades:</label>
+    <p id="cv-habilidades"></p>
+  </div>
+
+  <div class="cv-info">
+    <label>Perfil:</label>
+    <p id="cv-perfil"></p>
+  </div>
+
+  <button type="button" onclick="editarDatos()">Editar</button>
+</div>
+
 <script>
-  function guardarDatos(event) {
+  function mostrarDatos(event) {
     event.preventDefault(); 
 
     var nombre = document.getElementById('Nom_Ape').value;
@@ -184,25 +242,81 @@
     var telefono = document.getElementById('Num_tel').value;
     var email = document.getElementById('email').value;
     var nacionalidad = document.querySelector('input[list="nacionalidades"]').value;
- 
+    var nivelIngles = document.querySelector('input[name="niv_ing"]:checked').value;
 
-  
-    var contenido = "Nombre: " + nombre + "\n" +
-                    "Fecha de nacimiento: " + fechaNacimiento + "\n" +
-                    "Ocupación: " + ocupacion + "\n" +
-                    "Teléfono: " + telefono + "\n" +
-                    "Email: " + email + "\n" +
-                    "Nacionalidad: " + nacionalidad + "\n";
-  
+    var lenguajesProgramacion = [];
+    var lenguajes = document.querySelectorAll('input[name="LP"]:checked');
+    lenguajes.forEach(function(lenguaje) {
+        lenguajesProgramacion.push(lenguaje.value);
+    });
 
-    var archivo = new Blob([contenido], { type: 'text/plain' });
+    var aptitudes = [];
+    var aptitudesSeleccionadas = document.querySelectorAll('input[list^="aptitud"]');
+    aptitudesSeleccionadas.forEach(function(aptitud) {
+        aptitudes.push(aptitud.value);
+    });
 
+    var habilidades = [];
+    var habilidadesSeleccionadas = document.querySelectorAll('input[name="Hab"]:checked');
+    habilidadesSeleccionadas.forEach(function(habilidad) {
+        habilidades.push(habilidad.value);
+    });
 
-    var enlace = document.createElement('a');
-    enlace.href = URL.createObjectURL(archivo);
-    enlace.download = 'formulario.txt';
-    
-    enlace.click();
+    var perfil = document.getElementById('perfil').value;
+
+    document.getElementById('cv-nombre').textContent = nombre;
+    document.getElementById('cv-fecha-nacimiento').textContent = fechaNacimiento;
+    document.getElementById('cv-ocupacion').textContent = ocupacion;
+    document.getElementById('cv-telefono').textContent = telefono;
+    document.getElementById('cv-email').textContent = email;
+    document.getElementById('cv-nacionalidad').textContent = nacionalidad;
+    document.getElementById('cv-nivel-ingles').textContent = nivelIngles;
+    document.getElementById('cv-lenguajes-programacion').textContent = lenguajesProgramacion.join(", ");
+    document.getElementById('cv-aptitudes').textContent = aptitudes.join(", ");
+    document.getElementById('cv-habilidades').textContent = habilidades.join(", ");
+    document.getElementById('cv-perfil').textContent = perfil;
+
+    document.getElementById('miFormulario').style.display = 'none';
+    document.querySelector('.cv-container').style.display = 'block';
+  }
+
+  function editarDatos() {
+    document.querySelector('.cv-container').style.display = 'none';
+    document.getElementById('miFormulario').style.display = 'block';
+
+    var nombre = document.getElementById('cv-nombre').textContent;
+    var fechaNacimiento = document.getElementById('cv-fecha-nacimiento').textContent;
+    var ocupacion = document.getElementById('cv-ocupacion').textContent;
+    var telefono = document.getElementById('cv-telefono').textContent;
+    var email = document.getElementById('cv-email').textContent;
+    var nacionalidad = document.getElementById('cv-nacionalidad').textContent;
+    var nivelIngles = document.getElementById('cv-nivel-ingles').textContent;
+
+    var lenguajesProgramacion = document.getElementById('cv-lenguajes-programacion').textContent.split(", ");
+    lenguajesProgramacion.forEach(function(lenguaje) {
+        document.getElementById('LP'+lenguaje).checked = true;
+    });
+
+    var aptitudes = document.getElementById('cv-aptitudes').textContent.split(", ");
+    aptitudes.forEach(function(aptitud) {
+        document.querySelector('input[value="'+aptitud+'"][list^="aptitud"]').value = aptitud;
+    });
+
+    var habilidades = document.getElementById('cv-habilidades').textContent.split(", ");
+    habilidades.forEach(function(habilidad) {
+        document.querySelector('input[value="'+habilidad+'"][name="Hab"]').checked = true;
+    });
+
+    var perfil = document.getElementById('cv-perfil').textContent;
+    document.getElementById('perfil').value = perfil;
+
+    document.getElementById('Nom_Ape').value = nombre;
+    document.getElementById('Fecha_Nac').value = fechaNacimiento;
+    document.getElementById('Ocup').value = ocupacion;
+    document.getElementById('Num_tel').value = telefono;
+    document.getElementById('email').value = email;
+    document.querySelector('input[list="nacionalidades"]').value = nacionalidad;
+    document.querySelector('input[value="'+nivelIngles+'"][name="niv_ing"]').checked = true;
   }
 </script>
 
